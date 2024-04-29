@@ -14,3 +14,16 @@ listw = [10, 322, 1235, 623, 1267, 235, 6433, 1685, 9245]
 
 EvenNumbers = EvenList(listw)
 print(EvenNumbers)
+
+#optimized code
+def EvenList(numbers):
+    pares = []
+    for n in numbers:
+        n = n % 2
+        if n == 0:
+            pares.append(n)
+    return pares
+listw = [10, 322, 1235, 623, 1267, 235, 6433, 1685, 9245]
+
+EvenNumbers = EvenList(listw)
+print(EvenNumbers)
