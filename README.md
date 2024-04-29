@@ -1,2 +1,3 @@
-# leetcode
-### codes that i creat for leetcode challenges
+# Exercises
+### codes that i create for exercises
+### all the exercises are in the file
