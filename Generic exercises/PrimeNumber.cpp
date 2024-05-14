@@ -9,13 +9,18 @@ int main() {
     vector<int> checker; 
     cout << "insert the value: " << endl;
     cin >> value;
-    for (i = 1; i <= value; i++) {
+    for (int i = 1; i <= value; i++) {
         int y;
         y = value % i;
         if (y == 0) {
-            checker.insert(checker.end(), y)
+            checker.insert(checker.end(), i);
         }
         else {}
     }
-    
+    if (checker.size() == 2) {
+        cout << value << " is prime!" << endl;
+    }
+    else {
+        cout << value << " isn't prime!" << endl;
+    }
 }
