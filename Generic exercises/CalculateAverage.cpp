@@ -3,22 +3,22 @@
 
 using namespace std;
 
-int ArrayAvarage(int numbers[], int size) {
+int ArrayAverage(int numbers[], int size) {
     int total = 0;
-    int avarage;
+    int average;
     for (int i = 0; i < size; i++) {
         int x;
         x = numbers[i];
         total += x;
     }
-    avarage = total / size;
-    return avarage;
+    average = total / size;
+    return average;
 }
 
 int main() {
     int size, y;
     int listafodahaha[7] = {1, 23, 52, 123, 4, 65, 2};
-    size = sizeof(listafodahaha) / sizeof(int);
-    y = ArrayAvarage(listafodahaha, size);
+    size = sizeof(listafodahaha) / sizeof(listafodahaha[0]);
+    y = ArrayAverage(listafodahaha, size);
     cout << y << endl;
 }
