@@ -8,10 +8,15 @@ int main() {
                             {4, 5, 6},
                             {7, 8, 9}
                         };
-    int sum;
+    int sum = 0;
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
+            if (j == 1 && i == 1){
+                continue;
+            }
+            else {
             sum += matrix[i][j];
+            }
         }
     }
     cout << sum << endl;
