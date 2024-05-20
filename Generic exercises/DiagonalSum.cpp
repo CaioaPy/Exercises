@@ -10,15 +10,7 @@ int main() {
                     };
     int sum;
     for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            for (int d = 0; d < 2; d++){
-                if (j == d){
-                    sum += Matrix[i][j];
-                }
-                else
-                {}
-            }
-        }
+        sum += Matrix[i][i];
     }
     cout << sum << endl;
 }
