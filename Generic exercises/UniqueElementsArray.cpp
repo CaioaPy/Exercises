@@ -3,20 +3,20 @@
 
 using namespace std;
 
-void UniqueElements(int arr, int N){
+void UniqueElements(int arr[], int N){
     for (int i = 0; i < N; i++){
         int j;
-        for (int j = 0; j < i; j++){
-            if (arr[i] == arr[j]){
+        for (j = 0; j < i; j++) {
+            if (arr[i] == arr[j]) {
                 break;
             }
         }
-        if (i == j){
+        if (j == i) {
             cout << arr[i] << " ";
         }
     }
-
 }
+
 
 int main() {
     int lista[] = {1,2,4,2,3,5,1,2,3,6,5};
