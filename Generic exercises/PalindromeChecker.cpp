@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    string str1;
+    string str1, str1_formated;
     cout << "insert the string: " << endl;
     getline(cin, str1);
     for (char i : str1){
