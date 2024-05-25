@@ -6,3 +6,6 @@ def sum_to_n(n):
     for i in range(1, n + 1):
         m += i
     return m
+
+x = sum_to_n(3)
+print(x)
