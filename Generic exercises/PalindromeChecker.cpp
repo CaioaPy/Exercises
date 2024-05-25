@@ -9,9 +9,26 @@ using namespace std;
 int main() {
     string str1;
     cout << "insert the string: " << endl;
-    cin >> str1;
-    string str2 = str1;
+    getline(cin, str1);
+    for (char i : str1){
+        if (isalnum(i)){
+            str1_formated += tolower(i);
+        }
+    }
+
+    string str2 = str1_formated;
     reverse(str2.begin(), str2.end());
     cout << str2 << endl;
+
+    bool equal = false;
+
+    if (str1_formated == str2) {
+        cout << str1 << " is a palindrome";
+    }
+    else{
+        equal = false;
+        cout << str1 << " isn't a palindrome";
+    }
+    
 
 }
