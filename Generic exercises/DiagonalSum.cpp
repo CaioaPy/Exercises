@@ -14,10 +14,13 @@ int main() {
     }
     cout << "main diagonal: "<< sum << endl;
 
-    int sum2;
+    int sum2 = 0;
+    int o = 0;
     for (int j = 1; j < 4; j++){
-        int i = 3 - j;
-        sum2 += Matrix[i][i];
+            int i = 3 - j;
+            cout << o << i << endl;
+            sum2 += Matrix[o][i];
+            o++;
     }
-    cout << "second diagonal: "<< sum << endl;
+    cout << "second diagonal: "<< sum2 << endl;
 }
