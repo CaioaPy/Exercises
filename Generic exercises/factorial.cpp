@@ -12,7 +12,9 @@ int factorial(int n) {
 }
 
 int main() {
-    int y = 3;
+    int y;
+    cout << "insert the value:" << endl;
+    cin >> y;
     int x = factorial(y);
     cout << y <<"!: " << x << endl;
 }
