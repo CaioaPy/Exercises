@@ -12,5 +12,12 @@ int main() {
     for (int i = 0; i < 3; i++) {
         sum += Matrix[i][i];
     }
-    cout << sum << endl;
+    cout << "main diagonal: "<< sum << endl;
+
+    int sum2;
+    for (int j = 1; j < 4; j++){
+        int i = 3 - j;
+        sum2 += Matrix[i][i];
+    }
+    cout << "second diagonal: "<< sum << endl;
 }
