@@ -14,5 +14,5 @@ int factorial(int n) {
 int main() {
     int y = 3;
     int x = factorial(y);
-    cout << x << endl;
+    cout << y <<"!: " << x << endl;
 }
