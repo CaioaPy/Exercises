@@ -12,6 +12,7 @@ int factorial(int n) {
 }
 
 int main() {
-    int x = factorial(3);
+    int y = 3;
+    int x = factorial(y);
     cout << x << endl;
 }
