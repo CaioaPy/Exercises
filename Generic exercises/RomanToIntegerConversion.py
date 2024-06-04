@@ -11,7 +11,13 @@ M = 1000;
 numberInStr = input("insert the number in roman numerals: \n");
 number = 0;
 chars = list(numberInStr);
+values = []
+t = len(chars)
+for n in range(t):
+    values.append(0);
 
+
+"""
 for i in numberInStr:
     if (chars[i] == "I"):
         number += I;
@@ -33,4 +39,4 @@ for i in numberInStr:
     
     elif (chars[i] == 'M'):
         number += M
-    
+"""
