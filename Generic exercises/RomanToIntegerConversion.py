@@ -13,46 +13,35 @@ number = 0;
 chars = list(numberInStr);
 values = []
 t = len(chars)
-for n in range(t):
-    values.append(0);
     
 for i in range(t):
     if (chars[i] == "I"):
-        values[i] += I;
+        values.append(I);
     
     elif (chars[i] == 'V'):
-        values[i] += V;
+        values.append(V);
     
     elif (chars[i] == 'X'):
-        values[i] += X;
+        values.append(X);
     
     elif (chars[i] == 'L'):
-        values[i] += L;
+        values.append(L);
     
     elif (chars[i] == 'C'):
-        values[i] += C;
+        values.append(C);
     
     elif (chars[i] == 'D'):
-        values[i] += D;
+        values.append(D);
     
     elif (chars[i] == 'M'):
-        values[i] += M;
+        values.append(M);
 
-#test only
-for i in values:
-    print(i, end = " ");
-#test only
-
-loop = 0;
-Loopi = 0;
-while loop < t:
-    x1 = values[Loopi]
-    Loopi += 1;
-    x2 = values[Loopi]
-    if (x1 < x2):
-        x3 = x2 - x1;
-        number += x3;
+i = 0;
+while i < t:
+    if i + 1 < t and values[i] < values[i + 1]:
+        number += values[i + 1] - values[i];
+        i += 2;
     else:
-        number += x1;
-    loop += 1;
+        number += values[i];
+        i += 1;
 print(number)
