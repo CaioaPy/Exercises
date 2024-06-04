@@ -38,5 +38,21 @@ for i in range(t):
     elif (chars[i] == 'M'):
         values[i] += M;
 
+#test only
 for i in values:
     print(i, end = " ");
+#test only
+
+loop = 0;
+Loopi = 0;
+while loop < t:
+    x1 = values[Loopi]
+    Loopi += 1;
+    x2 = values[Loopi]
+    if (x1 < x2):
+        x3 = x2 - x1;
+        number += x3;
+    else:
+        number += x1;
+    loop += 1;
+print(number)
