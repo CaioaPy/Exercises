@@ -15,28 +15,28 @@ values = []
 t = len(chars)
 for n in range(t):
     values.append(0);
-
-
-"""
-for i in numberInStr:
+    
+for i in range(t):
     if (chars[i] == "I"):
-        number += I;
+        values[i] += I;
     
     elif (chars[i] == 'V'):
-        number += V;
+        values[i] += V;
     
     elif (chars[i] == 'X'):
-        number += X;
+        values[i] += X;
     
     elif (chars[i] == 'L'):
-        number += L;
+        values[i] += L;
     
     elif (chars[i] == 'C'):
-        number += C
+        values[i] += C;
     
     elif (chars[i] == 'D'):
-        number += D
+        values[i] += D;
     
     elif (chars[i] == 'M'):
-        number += M
-"""
+        values[i] += M;
+
+for i in values:
+    print(i, end = " ");
