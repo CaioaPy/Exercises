@@ -1,4 +1,6 @@
-def numWays(self, words: List[str], target: str) -> int:
+from typing import List
+
+def numWays(words: List[str], target: str) -> int:
     ways = 0
     for c in target:
         targetC = list(target)
@@ -18,4 +20,4 @@ def numWays(self, words: List[str], target: str) -> int:
                 
 words = ["acca","bbbb","caca", "eeww", "fksa"]
 target = "fae"
-numWays(words, target)
+print(numWays(words, target))
