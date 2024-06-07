@@ -24,17 +24,24 @@ class BankAccount():
         return f"{self.__class__.__name__}: {", ".join([f'{key}: {value}'for key, value in self.__dict__.items()])}"
     
     def deposit(self, deposit):
-        print(f"Depositing: ${deposit} into account {self.account_number}")
+        print(f"Depositing: ${deposit} into account: {self.account_number}")
         self.balance += deposit
         print(f"New balance: ${self.balance}")
 
     def withdraw(self, amount):
-        print(f"Withdrawing: ${amount} from account {self.account_number}")
+        print(f"Withdrawing: ${amount} from account: {self.account_number}")
         self.balance -= amount
-        print(f"new balance: ${self.balance}")
+        print(f"New balance: ${self.balance}")
+        
+    def transfer(self, amount, reciver_account):
+        print(f"Tranfering: ${amount} for account: {reciver_account.account_number}")
+        self.balance -= amount
+        reciver_account.balance += amount
+        print(f"New balance: ${self.balance}")
     
 account1 = BankAccount(1, "yato", 156.52)
 account2 = BankAccount(2, "master", 253.71)
 
 account1.deposit(500)
 account2.withdraw(100)
+account1.transfer(200, account2)
