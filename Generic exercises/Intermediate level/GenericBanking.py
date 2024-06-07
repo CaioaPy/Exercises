@@ -14,3 +14,15 @@
 #Transfer $200 from account1 to account2.
 #Display the balance of both accounts.
 
+class BankAccount():
+    def __init__(self, account_number, account_holder, balance):
+        self.account_number = account_number
+        self.account_holder = account_holder
+        self.balance = balance
+
+    def __str__(self):
+        return f"{self.__class__.__name__}: {", ".join([f'{key}: {value}'for key, value in self.__dict__.items()])}"
+    
+account1 = BankAccount(1, "yato", 156)
+account2 = BankAccount(2, "master", 253)
+print(account1)
