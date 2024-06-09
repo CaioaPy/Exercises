@@ -12,4 +12,9 @@ file = 'peoples.csv'
 people = []
 
 with open(file, mode = 'r', newline='') as file:
-    
+    csv_reader = csv.DictReader(file)
+    for row in csv_reader:
+        row['age'] = int(row['age'])
+        row['salary'] = int(row['salary'])
+        print(row['age'])
+        print(row['salary'])
