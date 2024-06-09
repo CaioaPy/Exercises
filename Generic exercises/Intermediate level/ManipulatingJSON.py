@@ -9,8 +9,8 @@
 
 import json
 
-users = '{ "name":"Master", "age":"24", "city":"NY"}'
+users = '{ "name":"Master", "age":"24", "email":"exeample@email.com"}'
 
 x = json.loads(users)
 
-print(x["age"])
+print(x["email"])
