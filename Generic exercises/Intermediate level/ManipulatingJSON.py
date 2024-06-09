@@ -10,12 +10,14 @@
 import json
 
 users = """
-[{ "name":"Master", "age":"24", "email":"exeample@email.com"},
-        { "name":"xiza", "age":"27", "email":"xizexeample@email.com"},
-        { "name":"play", "age":"31", "email":"playexeample@email.com"}
-        ]
+[
+    { "name": "Master", "age": 24, "email": "example@email.com" },
+    { "name": "Xiza", "age": 27, "email": "xiza@example.com" },
+    { "name": "Play", "age": 31, "email": "play@example.com" }
+]
 """
 
-x = json.loads(users)
+users = json.loads(users)
 
-print(x["email"])
+for user in users:
+    print(user["email"])
