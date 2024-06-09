@@ -9,7 +9,12 @@
 
 import json
 
-users = '{ "name":"Master", "age":"24", "email":"exeample@email.com"}'
+users = """
+[{ "name":"Master", "age":"24", "email":"exeample@email.com"},
+        { "name":"xiza", "age":"27", "email":"xizexeample@email.com"},
+        { "name":"play", "age":"31", "email":"playexeample@email.com"}
+        ]
+"""
 
 x = json.loads(users)
 
