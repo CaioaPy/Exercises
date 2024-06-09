@@ -21,3 +21,10 @@ users = json.loads(users)
 
 for user in users:
     print(user["email"])
+
+newUser = { "name": "new", "age": 21, "email": "anew@example.com" }
+users.append(newUser)
+
+updated_users_json = json.dumps(users, indent=3)
+print("\nUpdated Users List in JSON format:")
+print(updated_users_json)
