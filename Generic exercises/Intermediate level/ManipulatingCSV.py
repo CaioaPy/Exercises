@@ -6,3 +6,10 @@
 #Compute the average salary of all individuals in the file.
 #Write a new CSV file that includes only individuals with a salary above the average.
 
+import csv
+
+file = 'peoples.csv'
+people = []
+
+with open(file, mode = 'r', newline='') as file:
+    
