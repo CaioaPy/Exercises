@@ -10,3 +10,7 @@
 import json
 
 users = '{ "name":"Master", "age":"24", "city":"NY"}'
+
+x = json.loads(users)
+
+print(x["age"])
