@@ -8,13 +8,19 @@
 
 import csv
 
-file = 'peoples.csv'
+input_file = 'peoples.csv'
 people = []
+salaries = []
 
-with open(file, mode = 'r', newline='') as file:
+with open(input_file, mode = 'r', newline='') as file:
     csv_reader = csv.DictReader(file)
     for row in csv_reader:
-        row['age'] = int(row['age'])
         row['salary'] = int(row['salary'])
-        print(row['age'])
-        print(row['salary'])
+        salaries.append(row['salary'])
+
+total_salary = 0
+for salary in salaries:
+    total_salary += salary
+salaries_avg = 
+
+print(salaries)
