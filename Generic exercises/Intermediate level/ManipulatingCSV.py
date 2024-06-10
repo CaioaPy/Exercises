@@ -21,6 +21,9 @@ with open(input_file, mode = 'r', newline='') as file:
 total_salary = 0
 for salary in salaries:
     total_salary += salary
-salaries_avg = 
+salaries_avg = total_salary/len(salaries)
 
-print(salaries)
+#test only
+print(total_salary)
+print(len(salaries))
+print(salaries_avg)
