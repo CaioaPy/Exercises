@@ -23,7 +23,13 @@ for salary in salaries:
     total_salary += salary
 salaries_avg = total_salary/len(salaries)
 
+above_avg_salaries = []
+for salary in salaries:
+    if salary >= salaries_avg:
+        above_avg_salaries.append(salary)
+
 #test only
 print(total_salary)
 print(len(salaries))
 print(salaries_avg)
+print(above_avg_salaries)
