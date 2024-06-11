@@ -28,6 +28,12 @@ for salary in salaries:
     if salary >= salaries_avg:
         above_avg_salaries.append(salary)
 
+output_file = 'AboveAVGPeoples.csv'
+with open(output_file, mode = 'w', newline = '') as file:
+    csv_writer = csv.writer(output_file, delimiter = ',')
+    for salary in above_avg_salaries:
+        csv_writer.writerow()
+
 #test only
 print(total_salary)
 print(len(salaries))
