@@ -9,7 +9,7 @@
 import csv
 
 input_file = 'peoples.csv'
-people = []
+peoples = []
 salaries = []
 
 with open(input_file, mode = 'r', newline='') as file:
@@ -17,6 +17,7 @@ with open(input_file, mode = 'r', newline='') as file:
     for row in csv_reader:
         row['salary'] = int(row['salary'])
         salaries.append(row['salary'])
+        peoples.append(row['name'])
 
 total_salary = 0
 for salary in salaries:
@@ -24,18 +25,23 @@ for salary in salaries:
 salaries_avg = total_salary/len(salaries)
 
 above_avg_salaries = []
-for salary in salaries:
-    if salary >= salaries_avg:
-        above_avg_salaries.append(salary)
+above_avg_salaries_people = []
+for i in range(len(salaries)):
+    if salaries[i] >= salaries_avg:
+        above_avg_salaries.append(salaries[i])
+        above_avg_salaries_people.append(peoples[i])
 
+""""
 output_file = 'AboveAVGPeoples.csv'
 with open(output_file, mode = 'w', newline = '') as file:
     csv_writer = csv.writer(output_file, delimiter = ',')
     for salary in above_avg_salaries:
         csv_writer.writerow()
-
+"""
+        
 #test only
 print(total_salary)
 print(len(salaries))
 print(salaries_avg)
 print(above_avg_salaries)
+print(above_avg_salaries_people)
