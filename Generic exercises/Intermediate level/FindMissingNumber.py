@@ -6,7 +6,7 @@
 
 def find_missing_number(List) -> int:
     r = len(List)
-    i = 0
+    i = List[0]
     for n in List:
         if (n != i):
             return i
