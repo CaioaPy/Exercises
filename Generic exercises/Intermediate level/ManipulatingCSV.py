@@ -18,38 +18,28 @@ with open(input_file, mode = 'r', newline='') as file:
         row['age'] = int(row['age'])
         peoples_data.append(row)
 
-total_salary = 0
-for salary in salaries:
-    total_salary += salary
-salaries_avg = total_salary/len(salaries)
 
-above_avg_salaries = []
-above_avg_salaries_people = []
-for i in range(len(salaries)):
-    if salaries[i] >= salaries_avg:
-        above_avg_salaries.append(salaries[i])
-        above_avg_salaries_people.append(peoples[i])
+total_salary = sum(people['salary'] for people in peoples_data)
+salaries_avg = total_salary/len(peoples_data)
 
 peoples_output = []
-for people in peoples:
-    if people['salary'] > salaries_avg:
+for people in peoples_data:
+    if people['salary'] >= salaries_avg:
         peoples_output.append(people)
 
-"""
+
 output_file = 'AboveAVGPeoples.csv'
 with open(output_file, mode = 'w', newline = '') as file:
     csv_writer = csv.writer(file, delimiter = ',')
-    header = ['name', 'salary']
+    header = ['name', 'age', 'salary']
     csv_writer.writerow(header)
     for i in range(len(above_avg_salaries)):
         row = [above_avg_salaries_people[i]['name'], above_avg_salaries[i]['salary']]
         csv_writer.writerow(row)
 
-"""
+
 #test only
 print(total_salary)
-print(len(salaries))
+print(len(peoples_data))
 print(salaries_avg)
-print(above_avg_salaries)
-print(above_avg_salaries_people)
 print(peoples_output)
