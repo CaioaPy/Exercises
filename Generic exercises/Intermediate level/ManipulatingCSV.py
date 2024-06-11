@@ -9,15 +9,14 @@
 import csv
 
 input_file = 'peoples.csv'
-peoples = []
-salaries = []
+peoples_data = []
 
 with open(input_file, mode = 'r', newline='') as file:
     csv_reader = csv.DictReader(file)
     for row in csv_reader:
         row['salary'] = int(row['salary'])
-        salaries.append(row['salary'])
-        peoples.append(row['name'])
+        row['age'] = int(row['age'])
+        peoples_data.append(row)
 
 total_salary = 0
 for salary in salaries:
