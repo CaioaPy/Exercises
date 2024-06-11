@@ -31,13 +31,14 @@ for i in range(len(salaries)):
         above_avg_salaries.append(salaries[i])
         above_avg_salaries_people.append(peoples[i])
 
-""""
 output_file = 'AboveAVGPeoples.csv'
 with open(output_file, mode = 'w', newline = '') as file:
-    csv_writer = csv.writer(output_file, delimiter = ',')
-    for salary in above_avg_salaries:
-        csv_writer.writerow()
-"""
+    csv_writer = csv.writer(file, delimiter = ',')
+    header = ['name', 'salary']
+    csv_writer.writerow(header)
+    for i in range(len(above_avg_salaries)):
+        row = [above_avg_salaries_people[i]['name'], above_avg_salaries[i]['salary']]
+        csv_writer.writerow(row)
         
 #test only
 print(total_salary)
