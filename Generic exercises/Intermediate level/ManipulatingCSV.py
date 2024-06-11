@@ -33,8 +33,8 @@ with open(output_file, mode = 'w', newline = '') as file:
     csv_writer = csv.writer(file, delimiter = ',')
     header = ['name', 'age', 'salary']
     csv_writer.writerow(header)
-    for i in range(len(above_avg_salaries)):
-        row = [above_avg_salaries_people[i]['name'], above_avg_salaries[i]['salary']]
+    for people in peoples_output:
+        row = [people['name'], people['age'], people['salary']]
         csv_writer.writerow(row)
 
 
