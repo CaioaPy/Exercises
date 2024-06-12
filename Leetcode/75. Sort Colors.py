@@ -5,3 +5,13 @@
 #You must solve this problem without using the library's sort function.
 
 nums = [2,0,2,1,1,0]
+red = []
+white = [] 
+blue = []
+for n in nums:
+    if n == 0:
+        red.append(0)
+    elif n == 1:
+        white.append(1)
+    elif n == 2:
+        blue.append(2)
