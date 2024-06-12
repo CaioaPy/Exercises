@@ -15,3 +15,13 @@ for n in nums:
         white.append(1)
     elif n == 2:
         blue.append(2)
+    i = 0
+    for n in red:
+        nums[i] = 0
+        i += 1
+    for n in white:
+        nums[i] = 1
+        i += 1
+    for n in blue:
+        nums[i] = 2
+        i += 1
