@@ -11,11 +11,13 @@ def reverseVowels(str) -> str:
     i = 0
     aux_i = 0
     for c in str:
-        if (aux != "x"):
+        if (aux in vowels):
             ss[aux_i] = aux
+            print("a")
+
         if (c in vowels):
             aux = c
             aux_i = i
         i += 1
     return ss
-print(reverseVowels(s))
+print(reverseVowels(ss))
