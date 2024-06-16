@@ -20,4 +20,4 @@ def reverseVowels(str) -> str:
             aux_i = i
         i += 1
     return ss
-print(reverseVowels(ss))
+print(reverseVowels(s))
