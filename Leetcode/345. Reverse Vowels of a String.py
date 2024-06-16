@@ -15,7 +15,7 @@ def reverseVowels(str) -> str:
             ss[aux_i] = aux
             print("a")
 
-        if (c in vowels):
+        if (c == vowels):
             aux = c
             aux_i = i
         i += 1
