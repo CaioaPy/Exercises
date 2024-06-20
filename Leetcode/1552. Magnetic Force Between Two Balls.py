@@ -14,20 +14,21 @@ pos = [1, 2, 3, 4, 7]
 Ba = 3
 
 
-def discheck(positions, dis, balls,) -> bool:
+def discheck(positions, dis, balls) -> bool:
     first = positions[0]
-    for n in positions:
+    count = 1
+    for n in positions[1:]:
         if n - first >= dis:
-            balls - 1
-            if balls == 0:
-                return True
+            count += 1
             first = n
-        return False
+            if count >= balls:
+                return True
+    return count >= balls
 
 def BallsForce(positions, balls) -> int:
     positions.sort()
-    lower = positions[0]
-    higher = positions[-1]
+    lower = 0
+    higher = positions[-1] - positions[0]
     while (lower < higher):
         dis = (higher + lower) // 2
         if discheck(positions, dis, balls):
