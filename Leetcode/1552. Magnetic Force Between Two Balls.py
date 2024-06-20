@@ -10,16 +10,33 @@
 #Input: position = [1,2,3,4,7], m = 3
 #Output: 3
 
-pos = [1, 2, 3, 4, 7, 9]
+pos = [1, 2, 3, 4, 7]
 Ba = 3
-def BallsForce(positions, balls) -> int:
-    higher = 1
-    lower = 1
+
+
+def discheck(positions, dis, balls,) -> bool:
+    first = positions[0]
     for n in positions:
-        if n > higher:
-            higher = n
-        elif n < lower:
-            lower = n
-    return higher, lower
+        if n - first >= dis:
+            balls - 1
+            if balls == 0:
+                return True
+            first = n
+        return False
+
+def BallsForce(positions, balls) -> int:
+    positions.sort()
+    lower = positions[0]
+    higher = positions[-1]
+    while (lower < higher):
+        dis = (higher + lower) // 2
+        if discheck(positions, dis, balls):
+            lower = dis + 1
+        else:
+            higher = dis
+    if discheck(positions, dis, balls):
+        return lower
+    else:
+        return lower - 1
 
 print(BallsForce(pos, Ba))
