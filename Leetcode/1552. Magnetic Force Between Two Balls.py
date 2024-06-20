@@ -10,4 +10,16 @@
 #Input: position = [1,2,3,4,7], m = 3
 #Output: 3
 
-def BallsForce(positions, balls):
+pos = [1, 2, 3, 4, 7, 9]
+Ba = 3
+def BallsForce(positions, balls) -> int:
+    higher = 1
+    lower = 1
+    for n in positions:
+        if n > higher:
+            higher = n
+        elif n < lower:
+            lower = n
+    return higher, lower
+
+print(BallsForce(pos, Ba))
