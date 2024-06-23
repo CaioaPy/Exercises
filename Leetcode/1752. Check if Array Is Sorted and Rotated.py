@@ -19,5 +19,7 @@ def check(lista) -> bool:
     if x != 0:
         print(x)
         return True
+    else:
+        return False
 
 print(check(nums))
