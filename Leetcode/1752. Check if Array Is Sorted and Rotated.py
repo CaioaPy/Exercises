@@ -7,17 +7,17 @@
 
 nums = [3,4,5,1,2]
 
-def check(nums) -> bool:
-    sorted_nums = nums.sort()
+def check(lista) -> bool:
+    sorted_nums = sorted(lista)
     x = 0
     i = 0
-    leng = len(nums)
-    for n in range(0, leng):
-        if sorted_nums[i] == nums[0]:
-            x = n
-        i += 1
+    leng = len(lista)
+    print(sorted_nums)
+    for i in range(0, leng):
+        if sorted_nums[i] == lista[0]:
+            x = i
     if x != 0:
         return True
     print(x)
 
-check(nums)
+print(check(nums))
