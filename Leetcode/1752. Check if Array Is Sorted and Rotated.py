@@ -1,4 +1,5 @@
-#Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.
+#Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise,
+#return false.
 
 #There may be duplicates in the original array.
 
@@ -7,4 +8,3 @@
 nums = [3,4,5,1,2]
 
 def check(nums) -> bool:
-    
