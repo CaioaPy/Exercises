@@ -9,10 +9,15 @@ nums = [3,4,5,1,2]
 
 def check(nums) -> bool:
     sorted_nums = nums.sort()
-    i = 0
     x = 0
-    for n in sorted_nums:
+    i = 0
+    leng = len(nums)
+    for n in range(0, leng):
+        if sorted_nums[i] == nums[0]:
+            x = n
         i += 1
-        if n == nums[i]:
-            x = i
+    if x != 0:
+        return True
     print(x)
+
+check(nums)
