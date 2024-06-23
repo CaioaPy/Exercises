@@ -5,7 +5,7 @@
 
 #Note: An array A rotated by x positions results in an array B of the same length such that A[i] == B[(i+x) % A.length], where % is the modulo operation.
 
-nums = [3,4,5,1,2]
+nums = [5,3,4,5,1,2,7,9]
 
 def check(lista) -> bool:
     sorted_nums = sorted(lista)
