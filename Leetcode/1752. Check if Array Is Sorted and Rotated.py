@@ -17,7 +17,7 @@ def check(lista) -> bool:
         if sorted_nums[i] == lista[0]:
             x = i
     if x != 0:
+        print(x)
         return True
-    print(x)
 
 print(check(nums))
