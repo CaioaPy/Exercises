@@ -8,3 +8,11 @@
 nums = [3,4,5,1,2]
 
 def check(nums) -> bool:
+    sorted_nums = nums.sort()
+    i = 0
+    x = 0
+    for n in sorted_nums:
+        i += 1
+        if n == nums[i]:
+            x = i
+    print(x)
