@@ -21,6 +21,8 @@ Bst = [4,1,6,0,2,5,7,0,0,0,3,0,0,0,8]
 
 def BstToGst(BstRoot):
     Gst = []
+    for i in BstRoot:
+        Gst.append(0)
     levels_holder = (len(BstRoot) - 1)
     total_levels = 0
     while levels_holder != 0:
@@ -41,7 +43,8 @@ def BstToGst(BstRoot):
             print(f"i {i}")
             n += BstRoot[-i]
             print(f"post n {n}")
+            Gst[-aux] = n
             level_slot += 1
-    
+    print(Gst)
 
 BstToGst(Bst)
