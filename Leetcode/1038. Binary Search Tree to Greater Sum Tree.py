@@ -26,10 +26,15 @@ def BstToGst(BstRoot):
     while levels_holder != 0:
         levels_holder = levels_holder // 2
         total_levels += 1
-        print(levels_holder)
-    levels = total_levels
+    levels = total_levels 
     
-    print(levels)
+    x = 1
+    for n in range (x, levels + 2):
+        n = BstRoot[-(n)]
+        if n != 0: 
+            n += BstRoot[-((n + levels) + (levels - 1))]
+            print(n)
+
     
 
 BstToGst(Bst)
