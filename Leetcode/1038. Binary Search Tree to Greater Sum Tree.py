@@ -21,15 +21,15 @@ Bst = [4,1,6,0,2,5,7,0,0,0,3,0,0,0,8]
 
 def BstToGst(BstRoot):
     Gst = []
-    levels = 0
     levels_holder = (len(BstRoot) - 1)
-    levels_loop = 1
+    total_levels = 0
     while levels_holder != 0:
         levels_holder = levels_holder // 2
-        levels += 1 
+        total_levels += 1
         print(levels_holder)
-    print(levels)
+    levels = total_levels
     
+    print(levels)
     
 
 BstToGst(Bst)
