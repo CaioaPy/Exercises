@@ -29,6 +29,7 @@ def BstToGst(BstRoot):
     levels = total_levels 
     
     x = 1
+    print(levels)
     for n in range (x, levels + 2):
         aux = n
         n = BstRoot[-(n)]
