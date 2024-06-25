@@ -11,5 +11,18 @@
 #Input: root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]
 #Output: [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
 
+#binary search tree = 
+#                 ----4----
+#              1/           \6
+#          0/    \2      5/    \7
+#                 \3            \8
+
+Bst = [4,1,6,0,2,5,7,0,0,0,3,0,0,0,8]
 
 def BstToGst(BstRoot):
+    Gst = []
+    last = len(BstRoot) - 1
+
+    
+
+BstToGst(Bst)
