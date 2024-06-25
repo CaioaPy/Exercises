@@ -30,9 +30,10 @@ def BstToGst(BstRoot):
     
     x = 1
     for n in range (x, levels + 2):
+        aux = n
         n = BstRoot[-(n)]
         if n != 0: 
-            n += BstRoot[-((n + levels) + (levels - 1))]
+            n += BstRoot[-((aux + levels) + (levels - 1))]
             print(n)
 
     
