@@ -32,29 +32,33 @@ def BstToGst(BstRoot):
         total_levels += 1
     levels = total_levels 
     
-    x = 1
-    level_slot = 0
-    for n in range (x, levels + 2):
+    level_slot = 1
+    for n in range (1, levels + 2):
         global max
         aux = n
         n = BstRoot[-(n)]
         if n != 0:
-            i = ((aux + levels) + (levels)) - (level_slot * 2)
+            i = ((aux + levels) + (level_slot * 2) - (level_slot))
             n += BstRoot[-i]
             Gst[-aux] = n
             level_slot += 1
             max = aux
-    x = max
+    
     loop_levels = levels / 2
     loop_levels = math.ceil(loop_levels)
     levels = levels * 2
     level_slot = 0
-    for n in range (x, levels + 1):
+    for n in range (1, levels + 3):
         aux = n
         n = BstRoot[-(n)]
         if n != 0:
-            i = ((aux + loop_levels) + (loop_levels)) - (level_slot * 2)
+            print(f"loop_levels {loop_levels}")
+            print(f"aux {aux}")
+            i = ((aux + loop_levels) + (level_slot * 2) - (level_slot))
+            print(f"i {i}")
+            print(f"n {n}")
             n += BstRoot[-i]
+            print(f"n2 {n}")
             Gst[-aux] = n
             level_slot += 1
             max = aux
