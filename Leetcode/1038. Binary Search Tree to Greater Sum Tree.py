@@ -54,12 +54,15 @@ def BstToGst(BstRoot):
         if n != 0:
             print(f"loop_levels {loop_levels}")
             print(f"aux {aux}")
-            i = ((aux + loop_levels) + (level_slot * 2) - (level_slot))
-            print(f"i {i}")
-            print(f"n {n}")
-            n += BstRoot[-i]
-            print(f"n2 {n}")
-            Gst[-aux] = n
+            if n in Gst:
+                print("a")
+            else:
+                i = ((aux + loop_levels) + (level_slot * 2) - (level_slot))
+                print(f"i {i}")
+                print(f"n {n}")
+                n += BstRoot[-i]
+                print(f"n2 {n}")
+                Gst[-aux] = n
             level_slot += 1
             max = aux
 
