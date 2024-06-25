@@ -29,14 +29,19 @@ def BstToGst(BstRoot):
     levels = total_levels 
     
     x = 1
+    level_slot = 0
     print(levels)
     for n in range (x, levels + 2):
         aux = n
         n = BstRoot[-(n)]
-        if n != 0: 
-            n += BstRoot[-((aux + levels) + (levels - 1))]
-            print(n)
-
+        if n != 0:
+            print(f"aux {aux}")
+            print(f"n {n}")
+            i = ((aux + levels) + (levels)) - (level_slot * 2)
+            print(f"i {i}")
+            n += BstRoot[-i]
+            print(f"post n {n}")
+            level_slot += 1
     
 
 BstToGst(Bst)
