@@ -17,6 +17,8 @@
 #          0/    \2      5/    \7
 #                 \3            \8
 
+import math
+
 Bst = [4,1,6,0,2,5,7,0,0,0,3,0,0,0,8]
 
 def BstToGst(BstRoot):
@@ -32,19 +34,31 @@ def BstToGst(BstRoot):
     
     x = 1
     level_slot = 0
-    print(levels)
     for n in range (x, levels + 2):
+        global max
         aux = n
         n = BstRoot[-(n)]
         if n != 0:
-            print(f"aux {aux}")
-            print(f"n {n}")
             i = ((aux + levels) + (levels)) - (level_slot * 2)
-            print(f"i {i}")
             n += BstRoot[-i]
-            print(f"post n {n}")
             Gst[-aux] = n
             level_slot += 1
+            max = aux
+    x = max
+    loop_levels = levels / 2
+    loop_levels = math.ceil(loop_levels)
+    levels = levels * 2
+    level_slot = 0
+    for n in range (x, levels + 1):
+        aux = n
+        n = BstRoot[-(n)]
+        if n != 0:
+            i = ((aux + loop_levels) + (loop_levels)) - (level_slot * 2)
+            n += BstRoot[-i]
+            Gst[-aux] = n
+            level_slot += 1
+            max = aux
+
     print(Gst)
 
 BstToGst(Bst)
