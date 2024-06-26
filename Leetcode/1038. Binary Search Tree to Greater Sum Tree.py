@@ -55,7 +55,7 @@ def BstToGst(BstRoot):
             print(f"loop_levels {loop_levels}")
             print(f"aux {aux}")
             if n in Gst:
-                print("a")
+                print("is in Gst")
             else:
                 i = ((aux + loop_levels) + (level_slot * 2) - (level_slot))
                 print(f"i {i}")
