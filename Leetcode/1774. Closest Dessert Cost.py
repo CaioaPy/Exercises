@@ -33,17 +33,22 @@ def ClosestCost(bases, tops, target) -> int:
         x += n
         loop = True
         while loop:
-            for t in tops:
-                if x + t < target:
-                    x += t
-                elif x + t > target:
-                    loop = False
-        final_costs.append(x)
+            x2 = x
+            i = 0
+            len_bases = len(tops)
+            Iloop = 0
+            while Iloop < len_bases:
+                if x2 + tops[i] < target:
+                    x2 += tops[i]
+                elif x2 + tops[i] > target:
+                    final_costs.append(x2)
+                    i += 1
+                    Iloop += 1
     final_costs.sort()
     for n in final_costs:
         if n == target:
             return n
-    
+    return final_costs[-1]
 
 x = ClosestCost(bases, toppings, target)
 print(x)
