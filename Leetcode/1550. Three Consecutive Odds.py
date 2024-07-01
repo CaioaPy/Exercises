@@ -13,12 +13,20 @@ def threeConsecutiveOdds(nums) -> bool:
     n2 = None
     n3 = None
     for n in nums:
-        if n % 2 == 1:
-            n1 = n
-        elif n1 != 0 and n2 != 0 and n3 != 0:
+        if n1 == 1 and n2 == 1 and n3 == 1:
             return True
+        if n % 2 == 1:
+            if n1 == None:
+                n1 = 1
+            elif n2 == None:
+                n2 = 1
+            elif n3 == None:
+                n3 = 1
         else:
-            n1 = 0
-            n2 = 0
-            n3 = 0
+            n1 = None
+            n2 = None
+            n3 = None
     return False
+
+a = threeConsecutiveOdds(arr)
+print(a)
