@@ -22,26 +22,28 @@
 #- Take 0 of topping 1: cost 0 x 4 = 0
 #Total: 7 + 3 + 0 = 10.
 
-bases = [5, 1]
-toppings = [2, 7, 9, 10]
-target = 40
+bases = [1, 7]
+toppings = [3, 4]
+target = 10
 
 def ClosestCost(bases, tops, target) -> int:
     final_costs = []
-    i = 0
-    leng = len(bases)
-    loop = 0
-    while loop < leng:
+    for n in bases:
         x = 0
-        x += bases[i]
-        while x < target:
-            for n in tops:
-                if x + n < target:
-                    x += n
+        x += n
+        loop = True
+        while loop:
+            for t in tops:
+                if x + t < target:
+                    x += t
+                elif x + t > target:
+                    loop = False
         final_costs.append(x)
-        loop +=1
     final_costs.sort()
-    return final_costs[0]
+    for n in final_costs:
+        if n == target:
+            return n
+    
 
 x = ClosestCost(bases, toppings, target)
 print(x)
