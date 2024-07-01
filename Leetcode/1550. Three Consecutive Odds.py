@@ -4,3 +4,8 @@
 # Input: arr = [1,2,34,3,4,5,7,23,12]
 #Output: true
 #Explanation: [5,7,23] are three consecutive odds.
+
+arr = [5, 1, 6, 2, 5, 7, 9, 4, 3, 1]
+
+def threeConsecutiveOdds(nums) -> bool:
+    
