@@ -19,6 +19,8 @@ def SubArray(main_array, subarray) -> list[int]:
             if n == x:
                 subarray_output.append(n)
         i += 1
+        print(i)
+        print(subarray_output)
         if len(subarray_output) == len(subarray):
             loop = False
     return subarray_output
