@@ -7,8 +7,7 @@
 #Output: [2,2]
 
 def SubArray(main_array, subarray) -> list[int]:
-    loop1 = False
-    loop2 = False
+    loop = False
     i = 0
     subarray_output = []
     while loop:
@@ -16,6 +15,7 @@ def SubArray(main_array, subarray) -> list[int]:
         for n in main_array:
             if n == x:
                 subarray_output.append(n)
-
-        
-        loop = False
+        i += 1
+        if len(subarray_output) == len(subarray):
+            loop = False
+    return subarray_output
