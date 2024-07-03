@@ -43,8 +43,6 @@ def ClosestCost(bases, tops, target) -> int:
         loop = 0
         i = 0
         leng = len(bases) - 1
-        print(f"leng {leng}")
-        print(f"loop {loop}")
         while loop <= leng:
             x = 0
             x += n
