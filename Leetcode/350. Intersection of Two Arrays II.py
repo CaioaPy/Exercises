@@ -11,8 +11,6 @@ lista2 = [4,5,2]
 
 def SubArray(main_array, subarray) -> list[int]:
     subarray_output = []
-    loop = True
-    i = 0
     for x in subarray:
         if x in main_array:
             subarray_output.append(x)
