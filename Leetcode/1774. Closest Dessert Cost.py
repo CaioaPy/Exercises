@@ -28,8 +28,11 @@ target = 10
 
 def SumOfCost(price, top, target):
     while price <= target:
-        if price + top < target:
-            price += top
+        if price < target:
+            if price + top <= target:
+                price += top
+            else:
+                return price
         elif price == target:
             return price
 
@@ -37,15 +40,20 @@ def SumOfCost(price, top, target):
 def ClosestCost(bases, tops, target) -> int:
     final_costs = []
     for n in bases:
-        x = 0
-        x += n
         loop = 0
-        leng = len(bases) - 1
         i = 0
-        atual_top = tops[i]
-        while loop < leng:
-            x += SumOfCost(x, atual_top, target)
+        leng = len(bases) - 1
+        print(f"leng {leng}")
+        print(f"loop {loop}")
+        while loop <= leng:
+            x = 0
+            x += n
+            atual_top = tops[i]
+            x = SumOfCost(x, atual_top, target)
             final_costs.append(x)
+            print(f"atual_top {atual_top}")
+            print(f"n {n}")
+            print(f"x {x}")
             i += 1
             loop += 1
     final_costs.sort()
