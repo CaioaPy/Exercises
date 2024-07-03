@@ -49,9 +49,6 @@ def ClosestCost(bases, tops, target) -> int:
             atual_top = tops[i]
             x = SumOfCost(x, atual_top, target)
             final_costs.append(x)
-            print(f"atual_top {atual_top}")
-            print(f"n {n}")
-            print(f"x {x}")
             i += 1
             loop += 1
     final_costs.sort()
