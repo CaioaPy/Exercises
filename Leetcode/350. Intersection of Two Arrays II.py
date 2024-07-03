@@ -13,15 +13,10 @@ def SubArray(main_array, subarray) -> list[int]:
     subarray_output = []
     loop = True
     i = 0
-    while loop:
-        x = subarray[i]
+    for x in subarray:
         if x in main_array:
             subarray_output.append(x)
-        i += 1
-        print(i)
-        print(subarray_output)
-        if len(subarray_output) == len(subarray):
-            loop = False
     return subarray_output
 
 x = SubArray(lista, lista2)
+print(x)
