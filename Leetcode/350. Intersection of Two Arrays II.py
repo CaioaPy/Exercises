@@ -6,10 +6,13 @@
 #Input: nums1 = [1,2,2,1], nums2 = [2,2]
 #Output: [2,2]
 
+lista = [1, 2, 4, 4, 5, 6]
+lista2 = [4,5,2]
+
 def SubArray(main_array, subarray) -> list[int]:
-    loop = False
-    i = 0
     subarray_output = []
+    loop = True
+    i = 0
     while loop:
         x = subarray[i]
         for n in main_array:
@@ -19,3 +22,5 @@ def SubArray(main_array, subarray) -> list[int]:
         if len(subarray_output) == len(subarray):
             loop = False
     return subarray_output
+
+x = SubArray(lista, lista2)
