@@ -23,7 +23,7 @@
 #Total: 7 + 3 + 0 = 10.
 
 bases = [1, 7]
-toppings = [3, 4]
+toppings = [4, 5]
 target = 10
 
 def ClosestCost(bases, tops, target) -> int:
@@ -35,16 +35,17 @@ def ClosestCost(bases, tops, target) -> int:
         leng = len(bases) - 1
         while loop < leng:
             x2 = x
-            i = 0
             len_bases = len(tops)
             Iloop = 0
+            i = 0
             while Iloop < len_bases:
                 if x2 + tops[i] <= target:
                     x2 += tops[i]
+                    print(f"x: {x2} tops i : {tops[i]} i : {i}")
                 elif x2 + tops[i] >= target:
                     final_costs.append(x2)
-                    i += 1
                     Iloop += 1
+                    i += 1
             loop += 1
     final_costs.sort()
     print(final_costs)
