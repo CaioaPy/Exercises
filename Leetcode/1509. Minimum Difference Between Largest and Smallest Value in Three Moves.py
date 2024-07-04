@@ -12,4 +12,16 @@
 #In the third move, change 5 to 3. nums becomes [3,3,3,3].
 #After performing 3 moves, the difference between the minimum and maximum is 3 - 3 = 0.
 
-def min_difference():
+nums = [5,3,2,4]
+
+def closest(nums, Number) -> int:
+    aux = []
+    for n in nums:
+        aux.append(abs(Number-n))
+
+    return aux.index(min(aux))
+
+#def min_difference(nums) -> int:
+
+x = closest(nums, 3)
+print(x)
