@@ -21,7 +21,12 @@ def closest(nums, Number) -> int:
 
     return aux.index(min(aux))
 
-#def min_difference(nums) -> int:
+def min_difference(nums) -> int:
+    num = nums[0]
+    num_aux = closest(nums, num)
+    final = nums[num_aux]
+    return final
 
-x = closest(nums, 3)
+
+x = min_difference(nums)
 print(x)
