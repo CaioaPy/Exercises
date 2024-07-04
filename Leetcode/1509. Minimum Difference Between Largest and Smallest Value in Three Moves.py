@@ -24,8 +24,8 @@ def closest(nums, Number) -> int:
 def min_difference(nums) -> int:
     minim = min(nums)
     min_aux = closest(nums, minim)
-    final = nums[min_aux]
-    return final
+    min_aux = nums[min_aux]
+    return min_aux
 
 
 x = min_difference(nums)
