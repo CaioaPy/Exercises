@@ -22,9 +22,9 @@ def closest(nums, Number) -> int:
     return aux.index(min(aux))
 
 def min_difference(nums) -> int:
-    num = nums[0]
-    num_aux = closest(nums, num)
-    final = nums[num_aux]
+    minim = min(nums)
+    min_aux = closest(nums, minim)
+    final = nums[min_aux]
     return final
 
 
