@@ -30,7 +30,16 @@ def min_difference(nums) -> int:
     max_aux = nums[max_aux]
     nums.sort()
     aux = len(nums) // 2
-    return aux
+    aux = nums[aux]
+    if minim - aux < maximum - aux and minim - aux != 0:
+        nums[-1] = aux
+    else:
+        nums[0] = aux
+    if minim - aux < maximum - aux and minim - aux != 0:
+        nums[-1] = aux
+    else:
+        nums[0] = aux
+    return nums
 
 
 x = min_difference(nums)
