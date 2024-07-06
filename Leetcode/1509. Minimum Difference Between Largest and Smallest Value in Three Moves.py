@@ -35,10 +35,14 @@ def min_difference(nums) -> int:
         nums[-1] = aux
     else:
         nums[0] = aux
+    maximum = aux
+    minim = aux
     if minim - aux < maximum - aux and minim - aux != 0:
         nums[-1] = aux
     else:
         nums[0] = aux
+    maximum = aux
+    minim = aux
     return nums
 
 
