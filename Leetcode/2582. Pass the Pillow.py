@@ -18,9 +18,15 @@ time = 0
 def pass_the_pillow(person, time):
     i = 0
     persons = []
-    while i < person + 1:
+    while i <= person:
         persons.append(i)
         i += 1
+    position = 1
     
+    while time != 0:
+        if position <= person:
+            position += 1
+            time -= 1
+            up = True
 
 pass_the_pillow(n, time)
