@@ -12,24 +12,14 @@
 #In the third move, change 5 to 3. nums becomes [3,3,3,3].
 #After performing 3 moves, the difference between the minimum and maximum is 3 - 3 = 0.
 
-nums = [5,3,2,4]
+nums = [1,5,0,14]
 
 def min_difference(nums) -> int:
     minim = min(nums)
     maximum = max(nums)
     nums.sort()
-    aux = len(nums) // 2 - 1
+    aux = (len(nums) - 1) // 2
     aux = nums[aux]
-    print(nums)
-    if minim - aux < maximum - aux and minim - aux != 0:
-        nums[0] = aux
-    else:
-        if maximum - aux != 0:
-            nums[-1] = aux
-    nums.sort()
-    minim = nums[0]
-    maximum = nums[-1]
-    print(nums)
 
     if minim - aux < maximum - aux and minim - aux != 0:
         nums[0] = aux
@@ -39,7 +29,6 @@ def min_difference(nums) -> int:
     nums.sort()
     minim = nums[0]
     maximum = nums[-1]
-    print(nums)
 
     if minim - aux < maximum - aux and minim - aux != 0:
         nums[0] = aux
@@ -49,8 +38,18 @@ def min_difference(nums) -> int:
     nums.sort()
     minim = nums[0]
     maximum = nums[-1]
-    return nums
+
+    if minim - aux < maximum - aux and minim - aux != 0:
+        nums[0] = aux
+    else:
+        if maximum - aux != 0:
+            nums[-1] = aux
+    nums.sort()
+    minim = nums[0]
+    maximum = nums[-1]
+    diff = (maximum - minim)
+    return diff
 
 
 x = min_difference(nums)
-print(f"final{x}")
+print(x)
