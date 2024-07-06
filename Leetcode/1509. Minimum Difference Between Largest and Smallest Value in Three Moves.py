@@ -14,37 +14,37 @@
 
 nums = [5,3,2,4]
 
-def closest(nums, Number) -> int:
-    aux = []
-    for n in nums:
-        aux.append(abs(Number-n))
-
-    return aux.index(min(aux))
-
 def min_difference(nums) -> int:
     minim = min(nums)
-    min_aux = closest(nums, minim)
-    min_aux = nums[min_aux]
     maximum = max(nums)
-    max_aux = closest(nums, maximum)
-    max_aux = nums[max_aux]
     nums.sort()
-    aux = len(nums) // 2
+    aux = len(nums) // 2 - 1
     aux = nums[aux]
+    print(nums)
     if minim - aux < maximum - aux and minim - aux != 0:
         nums[-1] = aux
     else:
         nums[0] = aux
-    maximum = aux
-    minim = aux
+    minim = min(nums)
+    maximum = max(nums)
+    print(nums)
+
     if minim - aux < maximum - aux and minim - aux != 0:
         nums[-1] = aux
     else:
         nums[0] = aux
-    maximum = aux
-    minim = aux
+    minim = min(nums)
+    maximum = max(nums)
+    print(nums)
+
+    if minim - aux < maximum - aux and minim - aux != 0:
+        nums[-1] = aux
+    else:
+        nums[0] = aux
+    minim = min(nums)
+    maximum = max(nums)
     return nums
 
 
 x = min_difference(nums)
-print(x)
+print(f"final{x}")
