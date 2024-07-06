@@ -25,7 +25,10 @@ def min_difference(nums) -> int:
     minim = min(nums)
     min_aux = closest(nums, minim)
     min_aux = nums[min_aux]
-    return min_aux
+    maximum = max(nums)
+    max_aux = closest(nums, maximum)
+    max_aux = nums[max_aux]
+    return min_aux, max_aux
 
 
 x = min_difference(nums)
