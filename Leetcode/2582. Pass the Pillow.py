@@ -12,8 +12,8 @@
 #Explanation: People pass the pillow in the following way: 1 -> 2 -> 3 -> 4 -> 3 -> 2.
 #After five seconds, the 2nd person is holding the pillow.
 
-n = 10
-time = 0
+n = 4
+time = 5
 
 def pass_the_pillow(person, time):
     i = 0
@@ -22,11 +22,19 @@ def pass_the_pillow(person, time):
         persons.append(i)
         i += 1
     position = 1
-    
-    while time != 0:
-        if position <= person:
-            position += 1
-            time -= 1
-            up = True
 
-pass_the_pillow(n, time)
+    while time > 0:
+        if position < person:
+            position += 1
+        elif position > person:
+            position -= 1
+        else:
+            if position == 1:
+                position += 1
+            else:
+                position -= 1
+        time -= 1
+    return position
+
+x = pass_the_pillow(n, time)
+print(x)
