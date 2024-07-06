@@ -22,27 +22,30 @@ def min_difference(nums) -> int:
     aux = nums[aux]
     print(nums)
     if minim - aux < maximum - aux and minim - aux != 0:
-        nums[-1] = aux
-    elif maximum - aux < minim - aux and maximum - aux != 0:
         nums[0] = aux
+    else:
+        if maximum - aux != 0:
+            nums[-1] = aux
     nums.sort()
     minim = nums[0]
     maximum = nums[-1]
     print(nums)
 
     if minim - aux < maximum - aux and minim - aux != 0:
-        nums[-1] = aux
-    elif maximum - aux < minim - aux and maximum - aux != 0:
         nums[0] = aux
+    else:
+        if maximum - aux != 0:
+            nums[-1] = aux
     nums.sort()
     minim = nums[0]
     maximum = nums[-1]
     print(nums)
 
     if minim - aux < maximum - aux and minim - aux != 0:
-        nums[-1] = aux
-    elif maximum - aux < minim - aux and maximum - aux != 0:
         nums[0] = aux
+    else:
+        if maximum - aux != 0:
+            nums[-1] = aux
     nums.sort()
     minim = nums[0]
     maximum = nums[-1]
