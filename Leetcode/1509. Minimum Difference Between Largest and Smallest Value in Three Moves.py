@@ -28,7 +28,9 @@ def min_difference(nums) -> int:
     maximum = max(nums)
     max_aux = closest(nums, maximum)
     max_aux = nums[max_aux]
-    return min_aux, max_aux
+    nums.sort()
+    aux = len(nums) // 2
+    return aux
 
 
 x = min_difference(nums)
