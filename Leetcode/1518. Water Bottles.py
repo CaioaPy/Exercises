@@ -6,8 +6,18 @@
 
 #Example 1:
 
-
 #Input: numBottles = 9, numExchange = 3
 #Output: 13
 #Explanation: You can exchange 3 empty bottles to get 1 full water bottle.
 #Number of water bottles you can drink: 9 + 3 + 1 = 13.
+
+def bottles_exchange(full_bottles, ex_bottles):
+    total_bottles = 0
+    total_bottles += full_bottles
+    while full_bottles > ex_bottles:
+        if full_bottles % ex_bottles == 0:
+            new_bottles = full_bottles / ex_bottles
+            total_bottles += new_bottles
+    return total_bottles
+x = bottles_exchange(10, 5)
+print(x)
