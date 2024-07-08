@@ -16,12 +16,18 @@ def bottles_exchange(full_bottles, ex_bottles) -> int:
     total_bottles += full_bottles
     new_bottles = 0
     while full_bottles >= ex_bottles:
-        full_bottles = full_bottles - ex_bottles
-        total_bottles += 1
-        new_bottles += 1
-        if new_bottles == ex_bottles:
-            full_bottles += ex_bottles
-            new_bottles = 0
+        if full_bottles - ex_bottles > 0:
+            full_bottles = full_bottles - ex_bottles
+            total_bottles += 1
+            new_bottles += 1
+            if new_bottles == ex_bottles:
+                full_bottles += ex_bottles
+                new_bottles = 0
+        else:
+            if full_bottles + new_bottles >= ex_bottles:
+                total_bottles += 1
+                full_bottles = full_bottles - ex_bottles
+                new_bottles = 0
     return total_bottles
-x = bottles_exchange(9, 3)
+x = bottles_exchange(15, 4)
 print(x)
