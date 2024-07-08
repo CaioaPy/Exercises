@@ -24,8 +24,9 @@ def bottles_exchange(full_bottles, ex_bottles) -> int:
             if new_bottles == ex_bottles:
                 full_bottles += ex_bottles
                 new_bottles = 0
-            elif total_bottles == 0 and new_bottles == 0:
-                loop = False
+            else:
+                if total_bottles == 0 and new_bottles == 0:
+                    loop = False
         elif full_bottles + new_bottles >= ex_bottles:
             total_bottles += 1
             full_bottles = full_bottles - ex_bottles
