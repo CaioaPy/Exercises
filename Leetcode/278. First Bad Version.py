@@ -20,3 +20,15 @@
 
 #Input: n = 1, bad = 1
 #Output: 1
+
+def first_bad_version(n) -> int:
+    atual = 1
+    final = n
+
+    while atual < final:
+        version = atual + (final - atual) // 2
+        if isBadVersion(version):
+            final = version
+        else:
+            atual = version + 1
+    return atual
