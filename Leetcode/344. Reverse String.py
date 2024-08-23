@@ -19,7 +19,6 @@ def reverter(palavra):
     while index:
         index -= 1
         holder += palavra[index]
-        print(palavra)
         palavra[:-index]
     palavra = holder
     return palavra
