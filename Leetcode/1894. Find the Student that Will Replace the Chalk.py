@@ -22,17 +22,12 @@ Student number 0 does not have enough chalk, so they will have to replace it.
 """
 
 def chalkReplacer(chalk: list[int], k: int) -> int:
-    i = 0
-    max = len(chalk) -1
-    while k > chalk[i]:
+    total_chalk = sum(chalk)
+    k = k % total_chalk
+    for i in range(len(chalk)):
+        if k < chalk[i]:
+            return i
         k -= chalk[i]
-        if i + 1 >= max:
-            i = 0
-        else:
-            i += 1
-    if 
-    return i
-
 aa = [3,4,1,2]
 n = 25
 
