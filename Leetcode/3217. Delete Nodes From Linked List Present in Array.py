@@ -7,3 +7,15 @@
 
 #Output: [4,5]
 
+def modifiedList(nums: list[int], head: list[int]) -> list[int]:
+    index = 0
+    for i in nums:
+        if i in head:
+            nums[index] = 0
+        index += 1
+    print(nums)
+
+we = [1,2,3,4,5]
+aw = [1,2]
+
+modifiedList(we, aw)
