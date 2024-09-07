@@ -11,9 +11,10 @@ def modifiedList(nums: list[int], head: list[int]) -> list[int]:
     for i in nums:
         if i in head:
             nums.remove(i)
-    print(nums)
+    return nums
 
 we = [1,2,3,4,5]
 aw = [1,2]
 
-modifiedList(we, aw)
+x = modifiedList(we, aw)
+print(x)
