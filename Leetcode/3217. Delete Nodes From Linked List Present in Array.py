@@ -8,11 +8,9 @@
 #Output: [4,5]
 
 def modifiedList(nums: list[int], head: list[int]) -> list[int]:
-    index = 0
     for i in nums:
         if i in head:
-            nums[index] = 0
-        index += 1
+            nums.remove(i)
     print(nums)
 
 we = [1,2,3,4,5]
