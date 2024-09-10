@@ -11,10 +11,19 @@
 
 def spiralMatrix(m: int, n: int):
     final_array = [[-1] * m] * n
-    col = 0
-    row = 0
-    for i in range (0, n):
-        print(" ")
-        for j in range (0, m):
-            print(final_array[i][j],end= " ")
+    create = 0
+    up = False
+    back = False
+    arr = [1,2,3,4,5,6,7]
+    x = 0
+    indo = True
+    descecndo = True
+    while create < len(arr):
+        if (indo):
+            for i in range (0, n):
+                final_array[i][0] = arr[x]
+        if (descecndo):
+            for i in range (0, m):
+                final_array = arr[x]
+        x += 1
 spiralMatrix(2, 4)
