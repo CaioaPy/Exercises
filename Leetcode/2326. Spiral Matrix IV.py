@@ -9,21 +9,28 @@
 #Explanation: The diagram above shows how the values are printed in the matrix.
 #Note that the remaining spaces in the matrix are filled with -1.
 
-def spiralMatrix(m: int, n: int):
-    final_array = [[-1] * m] * n
-    create = 0
-    up = False
-    back = False
-    arr = [1,2,3,4,5,6,7]
-    x = 0
-    indo = True
-    descecndo = True
-    while create < len(arr):
-        if (indo):
-            for i in range (0, n):
-                final_array[i][0] = arr[x]
-        if (descecndo):
-            for i in range (0, m):
-                final_array = arr[x]
-        x += 1
-spiralMatrix(2, 4)
+def spiralMatrix(m: int, n: int, arr):
+    final_array = [[-1] * n for _ in range(m)]
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    D_index = 0  
+    row, col = 0, 0 
+    index = 0  
+
+    while index < len(arr):
+        final_array[row][col] = arr[index]
+        index += 1 
+        
+        next_row = row + directions[D_index][0]
+        next_col = col + directions[D_index][1]
+
+        if 0 <= next_row < m and 0 <= next_col < n and final_array[next_row][next_col] == -1:
+            row, col = next_row, next_col
+        else:
+            D_index = (D_index + 1) % 4
+            row += directions[D_index][0]
+            col += directions[D_index][1]
+    for row in final_array:
+        print(row)
+
+awe = [1, 2, 3, 4, 5, 6]
+spiralMatrix(2, 4, awe)
