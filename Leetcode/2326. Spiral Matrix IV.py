@@ -33,4 +33,4 @@ def spiralMatrix(m: int, n: int, arr):
         print(row)
 
 awe = [1, 2, 3, 4, 5, 6]
-spiralMatrix(2, 4, awe)
+spiralMatrix(4, 4, awe)
