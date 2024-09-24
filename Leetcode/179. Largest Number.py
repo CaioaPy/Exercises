@@ -21,6 +21,7 @@ def largestNumber(nums: list[int]) -> str:
     final_string = ""
     for i in nums2:
         final_string += str(i)
+    return final_string
 
 nums = 32013201312
 largestNumber(nums)
