@@ -15,6 +15,8 @@ def largestNumber(nums: list[int]) -> str:
     nums2 = []
     for i in num_list:
         nums2.append(i)
+    nums2.sort()
+    nums2.reverse()
     print(nums2)
 
 nums = 32013201312
