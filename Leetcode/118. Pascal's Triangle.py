@@ -13,7 +13,9 @@ def generate(numRows: int) -> list[list[int]]:
     final = [[]]
     final[[1]] = 1
     while numRows:
-        row = []
+        currentlen = len(final)
+        while currentlen:
+            row = []
 
 a = [[2], [2]]
 x = len(a)
