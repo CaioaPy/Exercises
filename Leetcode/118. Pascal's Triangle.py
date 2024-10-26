@@ -15,8 +15,13 @@ def generate(numRows: int) -> list[list[int]]:
     while numRows:
         currentlen = len(final)
         while currentlen:
+            nums = currentlen / 2
+            nums = round(nums)
             row = []
 
+#test
 a = [[2], [2]]
 x = len(a)
+y = 3 / 2
 print(x)
+print(y)
