@@ -10,8 +10,7 @@
 #Output: [[1]]
 
 def generate(numRows: int) -> list[list[int]]:
-    final = [[]]
-    final[[1]] = 1
+    final = [[1]]
     while numRows:
         currentlen = len(final)
         nums = currentlen / 2
@@ -22,13 +21,14 @@ def generate(numRows: int) -> list[list[int]]:
             if currentNum == 0 or currentNum == currentlen - 1:
                 row.append(1)
             else:
-                node = final[currentlen - 1[currentNum]] + final[currentlen - 1[currentNum + 1]]
+                node = final[currentlen - 1][currentNum] + final[currentlen - 1][currentNum + 1]
                 row.append(node)
             currentNum += 1
             nums -= 1
+        final.append(row)
         numRows -= 1
     return final
-#test
 
+#test
 u = generate(4)
 print(u)
