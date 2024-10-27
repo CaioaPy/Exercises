@@ -17,7 +17,13 @@ def generate(numRows: int) -> list[list[int]]:
         while currentlen:
             nums = currentlen / 2
             nums = round(nums)
-            row = []
+            currentNum = 0
+            while nums:
+                row = []
+                if currentNum == 0 or currentNum == currentlen - 1:
+                    row.append(1)
+                else:
+                    
 
 #test
 a = [[2], [2]]
