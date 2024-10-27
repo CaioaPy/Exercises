@@ -29,11 +29,6 @@ def generate(numRows: int) -> list[list[int]]:
         numRows -= 1
     return final
 #test
-a = [[2], [2]]
-x = len(a)
-y = 3 / 2
-print(x)
-print(y)
 
 u = generate(4)
 print(u)
