@@ -18,13 +18,15 @@ def generate(numRows: int) -> list[list[int]]:
             nums = currentlen / 2
             nums = round(nums)
             currentNum = 0
+            row = []
             while nums:
-                row = []
                 if currentNum == 0 or currentNum == currentlen - 1:
                     row.append(1)
                 else:
-                    
-
+                    node = final[currentlen - 1[currentNum]] + final[currentlen - 1[currentNum + 1]]
+                    row.append(node)
+                currentNum += 1
+                nums -= 1
 #test
 a = [[2], [2]]
 x = len(a)
