@@ -14,22 +14,26 @@ def generate(numRows: int) -> list[list[int]]:
     final[[1]] = 1
     while numRows:
         currentlen = len(final)
-        while currentlen:
-            nums = currentlen / 2
-            nums = round(nums)
-            currentNum = 0
-            row = []
-            while nums:
-                if currentNum == 0 or currentNum == currentlen - 1:
-                    row.append(1)
-                else:
-                    node = final[currentlen - 1[currentNum]] + final[currentlen - 1[currentNum + 1]]
-                    row.append(node)
-                currentNum += 1
-                nums -= 1
+        nums = currentlen / 2
+        nums = round(nums)
+        currentNum = 0
+        row = []
+        while nums:
+            if currentNum == 0 or currentNum == currentlen - 1:
+                row.append(1)
+            else:
+                node = final[currentlen - 1[currentNum]] + final[currentlen - 1[currentNum + 1]]
+                row.append(node)
+            currentNum += 1
+            nums -= 1
+        numRows -= 1
+    return final
 #test
 a = [[2], [2]]
 x = len(a)
 y = 3 / 2
 print(x)
 print(y)
+
+u = generate(4)
+print(u)
