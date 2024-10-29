@@ -8,16 +8,15 @@
 #Input: x = 2.10000, n = 3
 #Output: 9.26100
 
-class Solution:
-    def myPow(self, x: float, n: int) -> float:
-        final = x
-        if n == 0 or n < 0:
-            return 1
+def myPow(self, x: float, n: int) -> float:
+    final = x
+    if n == 0 or n < 0:
+        return 1
+    n -= 1
+    while n:
+        final *= x
         n -= 1
-        while n:
-            final *= x
-            n -= 1
-        return final
+    return final
 
 x = myPow(2, 5)
 print(x)
