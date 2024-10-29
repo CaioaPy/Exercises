@@ -12,15 +12,14 @@
 #Output: 3
 #Explanation: Because the 4th row is incomplete, we return 3.
 
-class Solution:
-    def arrangeCoins(self, n: int) -> int:
-        k = 1
-        i = 1
-        while n >= i:
-            n -= i
-            i += 1
-            k += 1
-        return k
+def arrangeCoins(self, n: int) -> int:
+    k = 1
+    i = 1
+    while n >= i:
+        n -= i
+        i += 1
+        k += 1
+    return k
     
 #test
 x = arrangeCoins(14)
