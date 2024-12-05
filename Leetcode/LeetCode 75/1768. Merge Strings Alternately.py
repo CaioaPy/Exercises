@@ -18,3 +18,22 @@
 #word1:  a   b 
 #word2:    p   q   r   s
 #merged: a p b q   r   s
+
+def mergeAlternately(word1: str, word2: str) -> str:
+    final = ""
+    i = 0
+    l1 = len(word1)
+    l2 = len(word2)
+    if l1 > l2:
+        leng = l1
+    else:
+        leng = l2
+    for i in range(0, leng):
+        if i < l1:
+            final += word1[i]
+        if i < l2:
+            final += word2[i]
+    return final
+
+x = mergeAlternately("ac", "csd")
+print(x)
