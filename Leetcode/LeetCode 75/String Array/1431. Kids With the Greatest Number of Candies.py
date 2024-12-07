@@ -24,3 +24,19 @@
 #Input: candies = [12,1,12], extraCandies = 10
 #Output: [true,false,true]
 
+def kidsWithCandies(candies: list[int], extraCandies: int) -> list[bool]:
+    final = []
+    highest = 0
+    for kid in candies:
+        if kid > highest:
+            highest = kid
+    for kid in candies:
+        if kid + extraCandies >= highest:
+            final.append(True)
+        else:
+            final.append(False)
+    return final
+
+aa = [4,2,1,1,2]
+x = kidsWithCandies(aa, 1)
+print(x)
