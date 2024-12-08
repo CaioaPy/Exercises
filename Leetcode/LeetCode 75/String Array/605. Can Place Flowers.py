@@ -10,3 +10,22 @@
 #Input: flowerbed = [1,0,0,0,1], n = 2
 #Output: false
 
+def canPlaceFlowers(flowerbed: list[int], n: int) -> bool:
+    for i in range(1, len(flowerbed)):
+        if flowerbed[i - 1] == 0 and flowerbed[i + 1] == 0:
+            if n != 0:
+                flowerbed[i] = 1
+                n -= 1
+            else:
+                break
+        else:
+            continue
+    if n == 0:
+        return True
+    return False
+
+a = [1,0,0,0,0,0,0,0,1]
+
+x = canPlaceFlowers(a, 2)
+
+print(x)
