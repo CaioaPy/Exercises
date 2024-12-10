@@ -16,3 +16,28 @@
 #Input: s = "a good   example"
 #Output: "example good a"
 #Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
+
+def reverseWords(s: str) -> str:
+    words = []
+    ind = 0
+    start = 0
+    leng = len(s)
+    while start < leng:
+        while start < leng and s[start] == " ":
+            start += 1
+        if start >= leng:
+            break
+        end = start
+        while end < leng and s[end] != " ":
+            end += 1
+        words.append(s[start:end])
+        start = end
+    final_string = ""
+    for i in range(len(words) -1, -1, -1):
+        final_string += words[i]
+        if i != 0:
+            final_string += " "
+    return final_string
+    
+x = reverseWords("aaa aaaa aa")
+print(x)
