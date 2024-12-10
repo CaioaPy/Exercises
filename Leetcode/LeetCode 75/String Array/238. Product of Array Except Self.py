@@ -9,3 +9,21 @@
 #Example 2:
 #Input: nums = [-1,1,0,-3,3]
 #Output: [0,0,9,0,0]
+
+def productExceptSelf(nums: list[int]) -> list[int]:
+    leng = len(nums)
+    answer = [1] * leng
+    
+    l = 1
+    for i in range(leng):
+        answer[i] = l
+        l *= nums[i]
+    
+    r = 1
+    for i in range(leng-1, -1, -1):
+        answer[i] *= r
+        r *= nums[i]
+    return answer
+a = [2,3,4]
+x = productExceptSelf(a)
+print(x)
