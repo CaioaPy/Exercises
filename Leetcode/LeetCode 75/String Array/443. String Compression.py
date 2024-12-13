@@ -23,3 +23,36 @@
 #Output: Return 4, and the first 4 characters of the input array should be: ["a","b","1","2"].
 #Explanation: The groups are "a" and "bbbbbbbbbbbb". This compresses to "ab12".
 
+def compress(chars: list[str]) -> int:
+    aux_char = None
+    aux_num = 0
+    write_index = 0 
+    for i in chars:
+        if aux_char is None:
+            aux_char = i
+            aux_num += 1
+        elif aux_char == i:
+            aux_num += 1
+        else:
+            chars[write_index] = aux_char
+            write_index += 1
+            if aux_num > 1:
+                for digit in str(aux_num):
+                    chars[write_index] = digit
+                    write_index += 1
+            aux_char = i
+            aux_num = 1
+    chars[write_index] = aux_char
+    write_index += 1
+    if aux_num > 1:
+        for digit in str(aux_num):
+            chars[write_index] = digit
+            write_index += 1
+
+    return write_index
+
+
+a = ["a","a","a","a","b","c","c"]
+x = compress(a)
+print(x)
+print(a)
